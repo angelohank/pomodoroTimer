@@ -1,0 +1,11 @@
+.titulo{
+    width: 100%;
+    display: inline-block;
+    margin: 20px auto;
+    padding: 10px 0 0 0;
+    height: 70px;
+    color: black;
+    background-color: darkgray;
+    font-size: 50px;
+    text-align: center;
+}
