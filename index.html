@@ -3,25 +3,23 @@
     <head>
         <meta charset="utf=8" lang="PT-BR">
         <link rel="stylesheet" href="reset.css">
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap.css">
-        <link rel="stylesheet" href="bootstrap-3.3.7-dist\css\bootstrap-min.css">
+        <link rel="stylesheet" href="bulma\css\bulma.css">
+        <!--<link rel="stylesheet" href="bulma\css\bulma-min.css"> -->
         <link rel="stylesheet" href="style.css">
         <title>Teste</title>
     </head>
 
     <body>
-        <div class="container-lg">
-            <header>
-                <div class="titulo">
-                    <h2>Página de Teste</h2>
-                </div>
-            </header>
-
-            <main>
-                <div class="data-hora">
-                    <button class="btn btn-default">TESTE</button>
-                </div>
-            </main>
+      <div class="container">
+        <div class="notification is-primary">
+          <p class="campo_hora"></p>
         </div>
+      </div>
+
+      <button id="botao">informar hora</button>
     </body>
+
+    <footer>
+      <script src="js/data-hora.js"></script>
+    </footer>
 </html>
