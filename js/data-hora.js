@@ -19,5 +19,3 @@ var ano = data.getFullYear();
 
 var campo_data = document.querySelector(".campo_data");
 campo_data.textContent = (dia + '/' + mes + '/' + ano);
-
-
