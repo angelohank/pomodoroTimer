@@ -1,3 +1,9 @@
 .notification{
     margin-top: 15px;
 }
+
+.botao-registra{
+    padding-top: 20px;
+    margin-left: 40%;
+    display: inline-block;
+}
