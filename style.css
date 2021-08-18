@@ -8,7 +8,7 @@
 .data{
     height: 100px;
     width: 90%;
-    margin: 30px auto;
+    margin: 130px auto;
     font-size: 50px;
     text-align: center;
     padding: 10px;
@@ -33,4 +33,10 @@
 .razao label{
     display: block;
     padding-top: 5px;
+}
+
+.copy{
+    padding-top: 140px;
+    text-align: center;
+    font-size: 10px;
 }
