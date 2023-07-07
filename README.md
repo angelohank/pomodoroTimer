@@ -1,3 +1,13 @@
-# littleMen21.github.io
+# Pomodoro Timer (in progress)
 
-projeto de registro de horários de ponto
+Criação de uma web page para controle de tempo e produtividade baseado no método Pomodoro
+
+* Funcionalidades:
+  - Focus time (configurável)
+  - Short break (configurável)
+  - Long break (configurável)
+  - Mudança de tema.
+
+Tecnologias utilizadas: 
+  - Bulma framework
+  - Javascript
