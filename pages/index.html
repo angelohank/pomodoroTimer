@@ -3,7 +3,6 @@
     <head>
         <meta charset="utf=8" lang="PT-BR">
         <link rel="stylesheet" href="../style/reset.css">
-        <link rel="stylesheet" href="bulma\css\bulma.css">
         <link rel="stylesheet" href="../style/style.css">
         <title>Pomodoro Timer</title>
     </head>
@@ -16,23 +15,19 @@
       </header>
 
       <main>
-        <span id="tempo-restante">25:00</span>
+        <span id="tempo-restante"></span>
 
         <div id="buttons-row">
-          <button class="btn start">Iniciar</button>
+          <button class="btn start" id="startButton" onclick="countdown()">Iniciar</button>
           <button class="btn stop">Parar</button>
         </div>
       
       </main>
        
-
-
     </body>
 
     <footer>
-      <script src="js/data-hora.js"></script>
-      <script src="js/registra-hora.js"></script>
-
+      <script src="../js/time-controller.js"></script>
       <p class="copy">&copy; Desenvolvido por Ângelo Hank</p>
     </footer>
 </html>
