@@ -47,13 +47,28 @@ function startCountdown(){
 }
 
 function stopCountdown() {
-    clearInterval(intervalId);
+    clearInterval( intervalId );
 }
 
 function refreshDisplay( currentTime ) {
-    
-    let min = Math.floor( currentTime / 60 );
-    let seg = currentTime % 60;
+    campo_tempo.innerHTML = formatDate( currentTime )
+}
 
-    campo_tempo.innerHTML = min + ":" + seg;//TODO: ajustar zero do segundo
+function formatDate( currentTime ) {
+    let min = Math.floor( currentTime / 60 );
+    let sec = currentTime % 60;
+
+    let date = {
+        minute: min,
+        second: sec
+    };
+
+    for( let key in date ) {
+        if( date[key].toString().length === 1 ) {
+
+            date[key] = "0" + date[key];
+        }
+    }
+
+    return date["minute"] + ":" + date["second"];
 }
