@@ -7,16 +7,18 @@ const POMODORO_TIMER_DEFAULT = 1500; //25 minutos
 const SHORT_BREAK_TIMER_DEFAULT = 300; //5 minutos
 const LONG_BREAK_TIMER_DEFAULT = 600; //10 minutos
 
-let currentTime = SHORT_BREAK_TIMER_DEFAULT; //TODO: deixar dinamico de acordo com o tipo de periodo
+let currentTime = POMODORO_TIMER_DEFAULT; //TODO: deixar dinamico de acordo com o tipo de periodo
+let intervalId;
 
-const startButton = document.getElementById("startButton");
-const campo_tempo = document.getElementById("tempo-restante");
+const startButton = document.getElementById( "startButton" );
+const stopButton = document.getElementById( "stopButton" )
+const campo_tempo = document.getElementById( "tempo-restante" );
 
-setInterval(updateCountdown, 1000);
+setDefaultValueInDisplay( 0 ); 
 
 function updateCountdown() {
     if( currentTime == 0 ) {
-        console.log("fim da contagem")
+        console.log( "fim da contagem" )
         //TODO: emitir notify para encerrar o periodo
     } else {
         currentTime--;
@@ -25,29 +27,33 @@ function updateCountdown() {
 }
 
 function setDefaultValueInDisplay( step ) {
-    
-    let timeToDisplay = 0;
 
-    switch(step) {
-        case 0:
-            timeToDisplay = POMODORO_TIMER_DEFAULT;
+    switch( step ) {
         case 1: 
             timeToDisplay = SHORT_BREAK_TIMER_DEFAULT;
+            break;
         case 2: 
             timeToDisplay = LONG_BREAK_TIMER_DEFAULT;
+            break;
+        default:
+            timeToDisplay = POMODORO_TIMER_DEFAULT;
     }
     
-    campo_tempo.innerHTML = timeToDisplay;
+    refreshDisplay( timeToDisplay );
 }
 
-function StartCountdown(){
-    console.log("startCountdown")
+function startCountdown(){
+    intervalId = setInterval( updateCountdown, 1000 );
 }
 
+function stopCountdown() {
+    clearInterval(intervalId);
+}
 
 function refreshDisplay( currentTime ) {
-    let min = Math.floor(currentTime / 60);
+    
+    let min = Math.floor( currentTime / 60 );
     let seg = currentTime % 60;
 
-    campo_tempo.innerHTML = min + ":" + seg
+    campo_tempo.innerHTML = min + ":" + seg;//TODO: ajustar zero do segundo
 }
