@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
 body {
-    background-color: #13e77b;
+    background-color: #311d39;
 }
 
 header {
@@ -40,8 +40,8 @@ main {
     border-radius: 8px;
     border-width: 1px;
     background-color: #fff;
-    color: #13e77b;
-    border-color: #13e77b;
+    color: #352630;
+    border-color: #352630;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 150%;
     height: 60px;
@@ -50,7 +50,7 @@ main {
 
 .btn:hover {
     cursor: pointer;
-    background-color: #05ad47;
+    background-color: #554865;
     color: #fff;
     transition: background-color 0.5s ease;
 }
@@ -69,6 +69,7 @@ main {
     padding-top: 140px;
     text-align: center;
     font-size: 10px;
+    color: aliceblue;
 }
 
 #step-row {
