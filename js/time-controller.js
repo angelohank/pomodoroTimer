@@ -1,11 +1,6 @@
-//ENUM?
-const focusTimeStep = 0;
-const shortBreakStep = 1;
-const longBreakStep = 2;
-
-const POMODORO_TIMER_DEFAULT = 1500; //25 minutos
-const SHORT_BREAK_TIMER_DEFAULT = 300; //5 minutos
-const LONG_BREAK_TIMER_DEFAULT = 600; //10 minutos
+const POMODORO_TIMER_DEFAULT = 1500; 
+const SHORT_BREAK_TIMER_DEFAULT = 300;
+const LONG_BREAK_TIMER_DEFAULT = 600;
 
 let currentTime = POMODORO_TIMER_DEFAULT; //TODO: deixar dinamico de acordo com o tipo de periodo
 let intervalId;
@@ -14,7 +9,7 @@ const startButton = document.getElementById( "startButton" );
 const stopButton = document.getElementById( "stopButton" )
 const campo_tempo = document.getElementById( "tempo-restante" );
 
-setDefaultValueInDisplay( 0 ); 
+setStep( 0 ); 
 
 function updateCountdown() {
     if( currentTime == 0 ) {
@@ -26,18 +21,24 @@ function updateCountdown() {
     }
 }
 
-function setDefaultValueInDisplay( step ) {
+function setStep( step ) {
+
+    stopCountdown(intervalId)
 
     switch( step ) {
         case 1: 
             timeToDisplay = SHORT_BREAK_TIMER_DEFAULT;
+            currentTime = SHORT_BREAK_TIMER_DEFAULT;
             break;
         case 2: 
             timeToDisplay = LONG_BREAK_TIMER_DEFAULT;
+            currentTime = LONG_BREAK_TIMER_DEFAULT;
             break;
         default:
             timeToDisplay = POMODORO_TIMER_DEFAULT;
+            currentTime = POMODORO_TIMER_DEFAULT;
     }
+    
     
     refreshDisplay( timeToDisplay );
 }
