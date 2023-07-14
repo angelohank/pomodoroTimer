@@ -39,9 +39,8 @@ main {
 .btn {
     border-radius: 8px;
     border-width: 1px;
-    background-color: #fff;
-    color: #352630;
-    border-color: #352630;
+    background-color: #75c58e;
+    color: #fff;
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 150%;
     height: 60px;
@@ -50,19 +49,19 @@ main {
 
 .btn:hover {
     cursor: pointer;
-    background-color: #554865;
-    color: #fff;
+    background-color: #fff;
+    color: #75c58e;
     transition: background-color 0.5s ease;
 }
 
 .stop {
-    color: #fa2a3a;
-    border-color: #fa2a3a;
+    color: #fff;
+    background-color: #cd5b51;
 }
 
 .stop:hover {
-    background-color: #fa2a3a;
-    color: #fff;
+    background-color: #fff;
+    color: #cd5b51;
     transition: background-color 0.5s ease;
 }
 .copy{
