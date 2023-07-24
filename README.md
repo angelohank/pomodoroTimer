@@ -9,4 +9,6 @@ Criação de uma web page para controle de tempo e produtividade baseado no mét
   - Mudança de tema.
 
 Tecnologias utilizadas: 
-  - Javascript
+  - HTML;
+  - CSS;
+  - Javascript;
