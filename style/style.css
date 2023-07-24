@@ -13,6 +13,9 @@ body {
 }
 
 header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
     font-size: 35px;
     font-family: 'Mynerve';
     margin: 3%;
@@ -76,7 +79,7 @@ main {
     padding-top: 130px;
     text-align: center;
     font-size: 10px;
-    color: aliceblue;
+    color: var(--font-color);
 }
 
 #step-row {
@@ -100,4 +103,65 @@ main {
     background-color: var(--font-color);
     color: var(--secondary-color);
     transition: background-color 0.5s ease;
+}
+
+#switch-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 40px;
+    height: 20px;
+}
+
+.switch input[type="checkbox"] {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 16px;
+    width: 16px;
+    left: 2px;
+    bottom: 2px;
+    background-color: var(--font-color);
+    border-radius: 50%;
+    transition: 0.4s;
+}
+
+input:checked + .slider {
+    background-color: var(--primary-color);
+}
+
+input:focus + .slider {
+    box-shadow: 0 0 1px var(--primary-color);
+}
+
+input:checked + .slider:before {
+    transform: translateX(20px);
+}
+
+.alterar-tema {
+    margin-left: 10px;
+    color: var(--primary-color);
+    font-size: 14px;
 }
