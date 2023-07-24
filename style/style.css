@@ -1,14 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Mynerve&display=swap');
 
+:root {
+    --primary-color: #04bd6d;
+    --secondary-color: #3A4F50;
+    --background-color: #1B2223;
+    --font-color: #F4FEFD;
+    --cancel-color: #f65151;
+}
+
 body {
-    background-color: #311d39;
+    background-color: var(--background-color);
 }
 
 header {
     font-size: 35px;
     font-family: 'Mynerve';
     margin: 3%;
-    color: aliceblue;
+    color: var(--primary-color);
     font-weight: bold;
 }
 
@@ -39,8 +47,8 @@ main {
 .btn {
     border-radius: 8px;
     border-width: 1px;
-    background-color: #75c58e;
-    color: #fff;
+    background-color: var(--primary-color);
+    color: var(--font-color);
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: 150%;
     height: 60px;
@@ -49,23 +57,23 @@ main {
 
 .btn:hover {
     cursor: pointer;
-    background-color: #fff;
-    color: #75c58e;
+    background-color: var(--font-color);
+    color: var(--primary-color);
     transition: background-color 0.5s ease;
 }
 
 .stop {
-    color: #fff;
-    background-color: #cd5b51;
+    color: var(--font-color);
+    background-color: var(--cancel-color);
 }
 
 .stop:hover {
-    background-color: #fff;
-    color: #cd5b51;
+    background-color: var(--font-color);
+    color: var(--cancel-color);
     transition: background-color 0.5s ease;
 }
 .copy{
-    padding-top: 140px;
+    padding-top: 130px;
     text-align: center;
     font-size: 10px;
     color: aliceblue;
@@ -80,16 +88,16 @@ main {
 }
 
 #step-row > button {
-    background-color: #0ca5b0;
-    color: #fff;
-    border-color: #0ca5b0;
+    background-color: var(--secondary-color);
+    color: var(--font-color);
+    border-color: var(--secondary-color);
     font-size: 120%;
     height: 30px;
     width: 150px;
 }
 
 #step-row > button:hover {
-    background-color: #fff;
-    color: #0ca5b0;
+    background-color: var(--font-color);
+    color: var(--secondary-color);
     transition: background-color 0.5s ease;
 }
